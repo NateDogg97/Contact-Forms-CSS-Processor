@@ -1,3 +1,7 @@
+/* First import Tailwind */
+@import 'tailwindcss';
+
+/* Scope all Tailwind styles to #app */
 #app {
-    @import 'tailwindcss';
+  @layer base, components, utilities;
 }
