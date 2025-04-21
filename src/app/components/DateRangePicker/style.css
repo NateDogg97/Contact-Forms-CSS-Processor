@@ -1,0 +1,143 @@
+.date-range-picker {
+  position: relative;
+  width: 100%;
+}
+
+.date-range-input {
+  height: 40px;
+  transition: all 0.2s ease;
+  border-color: #d1d5db;
+  cursor: pointer;
+  user-select: none;
+}
+
+.date-range-input:hover {
+  border-color: #9ca3af;
+}
+
+.date-range-input:focus, 
+.date-range-input:focus-within {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5);
+}
+
+.calendar-popup {
+  width: 620px;
+  max-width: calc(100vw - 20px);
+}
+
+.calendar-header {
+  padding: 10px 16px;
+  background-color: #f8fafc;
+}
+
+.calendar-months-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-month {
+  flex: 1;
+  min-width: 280px;
+  padding: 12px;
+}
+
+.calendar-month-header {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 8px;
+  padding: 4px 0;
+}
+
+.calendar-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar-day-name {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  padding: 4px 0;
+  font-weight: 500;
+}
+
+.calendar-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar-day {
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 0.875rem;
+  transition: all 0.15s ease;
+  color: #111827;
+  position: relative;
+}
+
+.calendar-day:hover:not(:disabled):not(.start-date):not(.end-date) {
+  background-color: #f3f4f6;
+}
+
+.calendar-day:disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+.calendar-day.empty {
+  cursor: default;
+}
+
+.calendar-day.start-date,
+.calendar-day.end-date {
+  background-color: #3b82f6;
+  color: white;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.calendar-day.start-date {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.calendar-day.end-date {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.calendar-day.start-date.single-date,
+.calendar-day.end-date.single-date {
+  border-radius: 50%;
+}
+
+.calendar-day.in-range {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 0;
+}
+
+.calendar-day.in-range:hover {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+/* For responsive layouts */
+@media (max-width: 640px) {
+  .calendar-popup {
+    width: 300px;
+    left: 0;
+  }
+  
+  .calendar-months-container {
+    flex-direction: column;
+  }
+}

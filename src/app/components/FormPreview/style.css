@@ -1,0 +1,235 @@
+/* Base Form Styles */
+.dynamic-form {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.form-field {
+    margin-bottom: 24px;
+    display: inline-block;
+    width: 100%;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-field input[type="text"],
+.form-field input[type="email"],
+.form-field input[type="number"],
+.form-field input[type="date"],
+.form-field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    line-height: 1.5;
+    height: 44px;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-field textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    line-height: 1.5;
+    min-height: 100px; 
+    resize: vertical; 
+    font-size: 15px;
+    color: #333;
+    font-family: inherit;
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #adb5bd;
+    opacity: 1;
+}
+
+/* Select Dropdown Styling */
+.form-field select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    padding-right: 2.5rem;
+}
+
+.checkbox-field,
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.checkbox-field input,
+.radio-option input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.checkbox-field label,
+.radio-option label {
+    font-weight: 400;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.radio-group {
+    margin-bottom: 20px;
+}
+
+.radio-group .group-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.radio-group .radio-option {
+    margin: 8px 0;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group .group-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+.checkbox-group .checkbox-option {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.form-field input[type="date"] {
+    font-family: inherit;
+}
+
+.form-field input[type="number"] {
+    -moz-appearance: textfield; 
+}
+
+.form-field input[type="number"]::-webkit-outer-spin-button,
+.form-field input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-field label .required,
+.group-label .required {
+    color: #dc3545;
+    margin-left: 4px;
+}
+
+.form-actions {
+    margin-top: 32px;
+    text-align: right;
+}
+
+.submit-button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #0069d9;
+}
+
+.submit-button:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-field input:disabled,
+.form-field textarea:disabled,
+.form-field select:disabled,
+.form-field input[type="checkbox"]:disabled + label,
+.form-field input[type="radio"]:disabled + label {
+    background-color: #e9ecef;
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.alert {
+    padding: 16px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+.form-description {
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: #666;
+}
+
+.field-help-text {
+    font-size: 13px;
+    color: #6c757d;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .form-field.col-span-6,
+    .form-field.col-span-4,
+    .form-field.col-span-3 {
+        grid-column: span 12;
+    }
+    
+    .form-actions {
+        text-align: center;
+    }
+}

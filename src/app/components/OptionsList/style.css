@@ -1,0 +1,95 @@
+/* OptionsList Component Styles */
+
+.options-list .option-input {
+  transition: all 0.2s ease-in-out;
+}
+
+.options-list .option-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.5);
+}
+
+.options-list .option-input.has-error {
+  border-color: #ef4444;
+}
+
+.options-list .error-message {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.options-list .add-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #dcfce7;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  transition: all 0.15s ease;
+}
+
+.options-list .add-option-btn:hover {
+  background-color: #dcfce7;
+}
+
+.options-list .option-remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ef4444;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease;
+}
+
+.options-list .option-remove-btn:hover {
+  background-color: #fee2e2;
+}
+
+.options-list .options-container {
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.options-list .empty-message {
+  color: #6b7280;
+  font-style: italic;
+  font-size: 0.875rem;
+  padding: 0.5rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.options-list .option-item {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Drag and drop styles (for future implementation) */
+.options-list .option-item.dragging {
+  opacity: 0.5;
+  background-color: #f3f4f6;
+}
+
+.options-list .option-item.drag-over {
+  border-top: 2px solid #3b82f6;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .options-list .option-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .options-list .options-container {
+    max-height: 200px;
+  }
+}

@@ -1,0 +1,100 @@
+/* FieldListItem Component Styles */
+
+.field-list-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.375rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  transition: all 0.2s ease;
+}
+
+.field-list-item:hover {
+  background-color: #f9fafb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.field-list-item.selected {
+  border-color: #3b82f6;
+  background-color: #f0f7ff;
+}
+
+.field-list-item .badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.field-list-item .badge.required {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.field-list-item .badge.optional {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.field-list-item .field-key {
+  font-family: monospace;
+  padding: 0.125rem 0.25rem;
+  background-color: #f3f4f6;
+  border-radius: 0.25rem;
+}
+
+.field-list-item .field-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.field-list-item .action-button {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  transition: all 0.15s ease;
+}
+
+.field-list-item .action-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 1px;
+}
+
+.field-list-item .edit-button {
+  color: #2563eb;
+}
+
+.field-list-item .edit-button:hover {
+  background-color: #dbeafe;
+}
+
+.field-list-item .move-button {
+  color: #4b5563;
+}
+
+.field-list-item .move-button:hover {
+  background-color: #f3f4f6;
+}
+
+.field-list-item .delete-button {
+  color: #dc2626;
+}
+
+.field-list-item .delete-button:hover {
+  background-color: #fee2e2;
+}
+
+/* Animation for list items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.field-list-item-enter {
+  animation: slideIn 0.3s ease-out forwards;
+}
